@@ -21,32 +21,30 @@
 </head>
 <body class="manrope-font">
 <main>
-  <header>
-    <div class="navbar bg-base-100">
+  <header class="bg-base-200 ">
+    <!-- nav container -->
+    <div class="navbar w-10/12 mx-auto">
+      <!-- navbar 1st part -->
       <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-            </svg>
+        <div class="gap-2 flex">
+          <div class="bg-[#ABEF5F] rounded-full border w-10 h-10 text-center"> 
+            <i class="fa-solid fa-arrow-right-long text-2xl"></i>
           </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li><a>Item 3</a></li>
-          </ul>
+            <div><h1 class="text-3xl text-[#212121] font-extrabold">Rinterio</h1></div>
         </div>
-        <a class="btn btn-ghost text-xl">daisyUI</a>
       </div>
+      <!-- navbar 2nd part -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a>Item 1</a></li>   
-          <li><a>Item 3</a></li>
-          <li><a>Item 1</a></li>
-          <li><a>Item 3</a></li>
+          <li class="font-extrabold"><a>Home</a></li>   
+          <li><a>Services</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>Blogs</a></li>
+          <li><a>Contact us</a></li>
         </ul>
       </div>
-      <div class="navbar-end">
+      <!-- navbar 3rd parts -->
+      <div class="hidden lg:inline navbar-end ">
         <button class="btn btn-ghost btn-circle">
           <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,13 +73,30 @@
               stroke-width="2"
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-            <span class="badge badge-xs badge-primary indicator-item"></span>
+            <span class="badge badge-xs badge-primary indicator-item "></span>
           </div>
         </button>
         <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
-          View Details
+          Book Consult
           <i class="fa-solid fa-arrow-right-long"></i>
         </button>
+        </div>
+        <!-- navbar 4th parts -->
+        <div class="dropdown navbar-end lg:hidden pl-32">
+          <div tabindex="0" role="button" class="btn btn-ghost ">
+            <div class="bg-[#FFFFFF] rounded-full border w-10 h-10 text-center"> 
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li class="font-extrabold"><a>Home</a></li>   
+            <li><a>Services</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Blogs</a></li>
+            <li><a>Contact us</a></li>
+          </ul>
         </div>
     </div>
   </header>
@@ -101,7 +116,7 @@
   </div>
   <!-- hero section ends -->
    <!-- process section starts -->
-   <section class="w-full bg-[#F4F4F4] mb-20">
+   <section class="w-full bg-[#F4F4F4] mb-20 pt-20">
     <div class="flex justify-center">
       <button class="btn bg-white rounded-3xl px-6 py-3 text-[#494949] font-semibold">
         <i class="fa-solid fa-arrow-right-long"></i>How we works
