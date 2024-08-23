@@ -21,11 +21,91 @@
 </head>
 <body class="manrope-font">
 <main>
+  <header>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Item 1</a></li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Item 1</a></li>   
+          <li><a>Item 3</a></li>
+          <li><a>Item 1</a></li>
+          <li><a>Item 3</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+        </button>
+        <button class="btn btn-ghost">
+          <div class="indicator">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+        <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
+          View Details
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+        </div>
+    </div>
+  </header>
+  <!-- hero section starts -->
+  <div class="hero min-h-screen mb-20 bg-gradient-to-b from-base-200 to-base-50">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <img src="./assets/banner.png" alt="">
+        <h1 class="text-4xl font-bold">A barn house of this design has a striking appearance</h1>     
+        <p class="py-6">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+        <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
+          View Details
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- hero section ends -->
    <!-- process section starts -->
    <section class="w-full bg-[#F4F4F4] mb-20">
-    <div class="flex justify-evenly bg-white rounded-3xl p-2 mx-auto w-44">
-        <div><i class="fa-solid fa-arrow-right-long"></i></div>
-        <div><h3 class="text-[#494949] font-semibold">How we works</h3></div>
+    <div class="flex justify-center">
+      <button class="btn bg-white rounded-3xl px-6 py-3 text-[#494949] font-semibold">
+        <i class="fa-solid fa-arrow-right-long"></i>How we works
+      </button>
     </div>
     <h1 class="text-3xl lg:text-5xl text-[#212121] font-extrabold text-center my-6">Our Works Process</h1>
     <p class="text-[#474747] font-medium my-6 mx-5 lg:w-2/3 lg:mx-auto text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
