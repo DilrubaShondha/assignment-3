@@ -13,13 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
     <!-- font awesome cdn -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-     <style>
-            .manrope-font {
-              font-family: "Manrope", sans-serif;
-            }
-     </style>
+     <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      primary: '#ABEF5F',
+                      secondary: '#212121',
+                      body: '#F4F4F4',
+                      title: '#212121',
+                      accent: '#212121',
+                      body_neutral: 'rgb(51, 51, 51)',
+                  },
+                  fontFamily: {
+                      manrope: 'Manrope',
+                  },
+                  backgroundImage: {
+                      vector: "url('./assets/vector.png')",
+                      call_to_action: "url('./images/call.jpg')",
+                      testimonials: "url('./images/testimonials.jpg')",
+                  },
+              },
+          },
+      }
+  </script>
 </head>
-<body class="manrope-font">
+<body class="manrope">
 <main>
   <header class="bg-base-200 ">
     <!-- nav container -->
@@ -27,10 +46,10 @@
       <!-- navbar 1st part -->
       <div class="navbar-start">
         <div class="gap-2 flex">
-          <div class="bg-[#ABEF5F] rounded-full border w-10 h-10 text-center"> 
+          <div class="bg-primary rounded-full border w-10 h-10 text-center"> 
             <i class="fa-solid fa-arrow-right-long text-2xl"></i>
           </div>
-            <div><h1 class="text-3xl text-[#212121] font-extrabold">Rinterio</h1></div>
+            <div><h1 class="text-3xl text-secondary font-extrabold">Rinterio</h1></div>
         </div>
       </div>
       <!-- navbar 2nd part -->
@@ -76,7 +95,7 @@
             <span class="badge badge-xs badge-primary indicator-item "></span>
           </div>
         </button>
-        <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
+        <button class="btn bg-primary rounded-3xl px-6 py-3">
           Book Consult
           <i class="fa-solid fa-arrow-right-long"></i>
         </button>
@@ -107,16 +126,54 @@
         <img class="mx-auto" src="./assets/banner.png" alt="">
         <h1 class="text-4xl font-bold">A barn house of this design has a striking appearance</h1>     
         <p class="py-6">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
-        <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
+        <button class="btn bg-primary rounded-3xl px-6 py-3">
           View Details
-          <i class="fa-solid fa-arrow-right-long"></i>
+          <i class="fa-solid fa-arrow-right-long transform -rotate-45"></i>
         </button>
       </div>
     </div>
   </div>
   <!-- hero section ends -->
+   <!-- design section starts -->
+   <section class="w-full bg-[#F4F4F4] mb-20 pt-20 bg-vector bg-no-repeat bg-left-top">
+    <div class="w-10/12 mx-auto flex flex-col lg:flex-row gap-10 pb-20">
+      <!-- text section -->
+       <div class="flex-1 ">
+        <div class="text-center lg:text-left">
+          <button class="btn bg-white rounded-3xl px-6 py-2 text-[#494949] font-semibold">
+            <i class="fa-solid fa-arrow-right-long"></i>About us
+          </button>
+        </div>
+        <h1 class="text-3xl lg:text-4xl text-[#212121] font-extrabold my-4 text-center lg:text-left">We design thoughtful, liveable spaces</h1>
+        <p class="text-[#474747] font-medium my-6 text-center lg:text-left">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        <!-- 1st card -->
+        <div class="card bg-white flex flex-row items-start mb-4">
+          <figure class="pt-10 pl-7">
+            <img src="./assets/commercial.png" alt=""/>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Commercial</h2>
+            <p>The barn house captivates with its blend of rustic charm and modern.</p>
+          </div>
+        </div>
+        <!-- 2nd card -->
+        <div class="card bg-white flex flex-row items-start">
+          <figure class="pt-10 pl-7">
+            <img src="./assets/residential.png" alt=""/>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Building</h2>
+            <p>The barn house captivates with its blend of rustic charm and modern.</p>
+          </div>
+        </div>
+       </div>
+       <!-- image section -->
+        <div class="flex-1 pt-5">
+          <img src="./assets/Rectangle.png" alt="">
+        </div>
+    </div>
+
    <!-- process section starts -->
-   <section class="w-full bg-[#F4F4F4] mb-20 pt-20">
     <div class="flex justify-center">
       <button class="btn bg-white rounded-3xl px-6 py-3 text-[#494949] font-semibold">
         <i class="fa-solid fa-arrow-right-long"></i>How we works
@@ -166,13 +223,10 @@
           <p>The barn house captivates with its blend of rustic charm and modern.</p>
         </div>
       </div>
-
-
-
     </div>
 
     </section>
-    <!-- portfolio section starts -->
+<!-- portfolio section starts -->
      <section class="w-10/12 mx-auto">
         <div class="flex justify-evenly bg-[#ABEF5F33] rounded-3xl p-2 w-1/4 mx-auto">
             <div><i class="fa-solid fa-arrow-right-long"></i></div>
@@ -184,57 +238,58 @@
      <div class="grid lg:grid-rows-2 grid-cols-1 lg:grid-cols-12 gap-5 mb-20">
        <!-- 1st row -->
         <!--1st row 1st card -->
-        <div class="card lg:card-side border col-span-12 lg:col-span-8 ">
-          <div class="w-full m-auto py-5 lg:pl-5">
-            <img class="border-2 border-dashed border-gray-300 mx-auto lg:mx-0" src="./assets/img1.png" alt="Album" />
+        <div class="card lg:card-side border col-span-12 lg:col-span-8 order-1">
+          <div class="w-full m-auto p-5 lg:px-0 lg:pl-5">
+            <img class="h-[180px] w-full border-2 border-dashed border-gray-300 mx-auto lg:mx-0" src="./assets/img1.png" alt="Album" />
           </div>
           <div class="card-body pt-0 lg:pt-5">
               <h1 class="text-[#494949] text-2xl font-extrabold">Commercial</h1>
               <p class="text-[#737373] font-medium py-3">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
-              <div>
+              <div class="flex gap-3">
                   <div><h1 class="text-[#212121] text-xl font-extrabold">View Details</h1></div>
-                  <div></div>
+                  <div class="w-8 h-8 bg-primary rounded-full"><i class="fa-solid fa-arrow-right-long transform -rotate-45 ml-2 mt-2"></i>
+                  </div>
               </div>
             </div>
           </div>
       <!-- 1st row 2nd card -->
-      <div class="card lg:card-side border col-span-12 lg:col-span-4 p-5 ">
-        <img class=" border-2 border-dashed border-gray-300" src="./assets/img2.png" alt="Album" />
+      <div class="card lg:card-side border col-span-12 lg:col-span-4 p-5 order-2">
+        <img class="h-[180px] w-full border-2 border-dashed border-gray-300" src="./assets/img2.png" alt="Album" />
       </div>       
        <!-- 2nd row starts-->
       <!-- 2nd row 1st card -->
-      <div class="card lg:card-side border col-span-12 lg:col-span-3 p-5 ">
-        <img class=" border-2 border-dashed border-gray-300" src="./assets/img3.png" alt="Album" />
+      <div class="card lg:card-side border col-span-12 lg:col-span-3 p-5 order-4 lg:order-3">
+        <img class="h-[180px] w-full border-2 border-dashed border-gray-300" src="./assets/img3.png" alt="Album" />
       </div>       
       <!--2nd row 2nd card -->
-      <div class="card lg:card-side border col-span-12 lg:col-span-6">
-        <div class="w-full m-auto py-5 lg:pl-5">
-          <img class="border-2 border-dashed border-gray-300 mx-auto" src="./assets/img4.png" alt="Album" />
+      <div class="card lg:card-side border col-span-12 lg:col-span-6 order-3 lg:order-4">
+        <div class="w-full m-auto p-5 lg:pl-5 lg:px-0">
+          <img class="h-[180px] w-full border-2 border-dashed border-gray-300 mx-auto" src="./assets/img4.png" alt="Album" />
         </div>
         <div class="card-body pt-0 lg:pt-5">
             <h1 class="text-[#494949] text-2xl font-extrabold">Commercial</h1>
             <p class="text-[#737373] font-medium py-3">The barn house captivates with its blend of rustic charm and modern.</p>
-            <div>
-                <div><h1 class="text-[#212121] text-xl font-extrabold">View Details</h1></div>
-                <div></div>
-            </div>
+            <div class="flex gap-3">
+                  <div><h1 class="text-[#212121] text-xl font-extrabold">View Details</h1></div>
+                  <div class="w-8 h-8 bg-primary rounded-full"><i class="fa-solid fa-arrow-right-long transform -rotate-45 ml-2 mt-2"></i>
+                  </div>
+              </div>
           </div>
         </div>
       <!-- 2nd row 3rd card -->
-        <div class="card lg:card-side border col-span-12 lg:col-span-3 p-5">
-          <img class=" border-2 border-dashed border-gray-300" src="./assets/img5.png" alt="Album" />
+        <div class="card lg:card-side border col-span-12 lg:col-span-3 p-5 order-5">
+          <img class="h-[180px] w-full border-2 border-dashed border-gray-300" src="./assets/img5.png" alt="Album" />
         </div>
       </div>
    </div>
     </section>
-    <!-- portfolio section ends -->
+<!-- portfolio section ends -->
 </main>
 <!-- footer section starts -->
 <footer class="footer footer-center bg-black text-base-content rounded p-10">
   <!-- footer first line -->
     <nav class="gap-2 flex">
-      <div class="bg-[#ABEF5F] rounded-full border w-10 h-10 text-center"> 
-        <i class="fa-solid fa-arrow-right-long text-2xl"></i>
+      <div class="w-8 h-8 bg-primary rounded-full"><i class="fa-solid fa-arrow-right-long transform -rotate-45 ml-1 mt-1 text-lg"></i>
       </div>
         <div><h1 class="text-3xl text-[#E9E9E9] font-extrabold">Rinterio</h1></div>
     </nav>
@@ -249,9 +304,14 @@
       <a class="link link-hover">Contact us</a>
     </nav>
     <nav>
-      <button class="btn bg-[#ABEF5F] rounded-3xl px-6 py-3">
-        Book Consult
-        <i class="fa-solid fa-arrow-right-long"></i>
+      <button class="btn bg-primary rounded-3xl border-none px-10 lg:px-5">
+        <div class="flex items-center gap-2">
+          <div>
+            <h1 class="font-extrabold text-lg">Book Consult</h1>
+        </div>        
+        <div class="w-8 h-8 bg-black rounded-full"><i class="fa-solid fa-arrow-right-long transform -rotate-45 ml-1 mt-1 text-lg text-white"></i>
+        </div>
+        </div>
       </button>
     </nav>
     
